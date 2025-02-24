@@ -17,6 +17,7 @@ This project implements a multi-class object detection model using the **MobileN
 7. [Inference and Testing](#inference-and-testing)
 8. [Saving and Loading the Model](#saving-and-loading-the-model)
 9. [Results Visualization](#results-visualization)
+10. [Conclusion](#conclusion)
 
 ---
 

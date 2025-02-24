@@ -108,9 +108,9 @@ def validate_bbox(bbox, target_size):
     return True
 
 # --- Visualize Results ---
-def visualize_results(original_image, gt_bbox, pred_bbox, target_size):
+def visualize_results(original_image, gt_label, pred_label, gt_bbox, pred_bbox, target_size):
     """
-    Visualize ground truth and predicted bounding boxes.
+    Visualize ground truth and predicted bounding boxes with meaningful titles.
     """
     # Denormalize ground truth bounding box
     gt_bbox_denorm = denormalize_bbox(gt_bbox, target_size)
@@ -127,7 +127,7 @@ def visualize_results(original_image, gt_bbox, pred_bbox, target_size):
     cv2.rectangle(original_image, (gt_bbox_denorm[0], gt_bbox_denorm[1]), (gt_bbox_denorm[2], gt_bbox_denorm[3]), (0, 0, 255), 2)
     cv2.putText(
         original_image,
-        "GT",
+        f"GT: {gt_label}",
         (gt_bbox_denorm[0], gt_bbox_denorm[1] - 10),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.9,
@@ -139,7 +139,7 @@ def visualize_results(original_image, gt_bbox, pred_bbox, target_size):
     cv2.rectangle(original_image, (pred_bbox_denorm[0], pred_bbox_denorm[1]), (pred_bbox_denorm[2], pred_bbox_denorm[3]), (0, 255, 0), 2)
     cv2.putText(
         original_image,
-        "Pred",
+        f"Pred: {pred_label}",
         (pred_bbox_denorm[0], pred_bbox_denorm[1] - 10),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.9,
@@ -150,26 +150,26 @@ def visualize_results(original_image, gt_bbox, pred_bbox, target_size):
     # Display the result
     plt.figure(figsize=(10, 10))
     plt.imshow(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB))
-    plt.title("Ground Truth vs Predicted Bounding Box")
+    plt.title(f"Ground Truth: {gt_label}, Predicted Class: {pred_label}")
     plt.axis("off")
     plt.show()
 
-# --- Build Model ---
-def build_model(input_shape, num_classes):
-    """
-    Build the object detection model using MobileNetV2 as the base network.
-    """
-    base_model = MobileNetV2(weights="imagenet", include_top=False, input_tensor=Input(shape=input_shape))
-    base_model.trainable = False
-    flatten = Flatten()(base_model.output)
-    class_head = Dense(128, activation="relu")(flatten)
-    class_head = Dense(num_classes, activation="softmax", name="class_label")(class_head)  # Output for 4 classes
-    bbox_head = Dense(128, activation="relu")(flatten)
-    bbox_head = Dense(64, activation="relu")(bbox_head)
-    bbox_head = Dense(32, activation="relu")(bbox_head)
-    bbox_head = Dense(4, activation="sigmoid", name="bounding_box")(bbox_head)
-    model = Model(inputs=base_model.input, outputs=[class_head, bbox_head])
-    return model
+# # --- Build Model ---
+# def build_model(input_shape, num_classes):
+#     """
+#     Build the object detection model using MobileNetV2 as the base network.
+#     """
+#     base_model = MobileNetV2(weights="imagenet", include_top=False, input_tensor=Input(shape=input_shape))
+#     base_model.trainable = False
+#     flatten = Flatten()(base_model.output)
+#     class_head = Dense(128, activation="relu")(flatten)
+#     class_head = Dense(num_classes, activation="softmax", name="class_label")(class_head)  # Output for 4 classes
+#     bbox_head = Dense(128, activation="relu")(flatten)
+#     bbox_head = Dense(64, activation="relu")(bbox_head)
+#     bbox_head = Dense(32, activation="relu")(bbox_head)
+#     bbox_head = Dense(4, activation="sigmoid", name="bounding_box")(bbox_head)
+#     model = Model(inputs=base_model.input, outputs=[class_head, bbox_head])
+#     return model
 
 # --- Load Model for Inference ---
 def load_model_for_inference(model_path):
@@ -285,7 +285,7 @@ def run_inference(image_directory, annotation_file_prefix, model_path, lb):
                 print(f"Normalized Predicted BBox: {normalized_pred_box}")
 
                 # Visualize results
-                visualize_results(image, normalized_gt_box, normalized_pred_box, TARGET_IMAGE_SIZE)
+                visualize_results(image, cl, class_label, normalized_gt_box, normalized_pred_box, TARGET_IMAGE_SIZE)
 
             except Exception as e:
                 print(f"Error processing {image_name}: {e}")

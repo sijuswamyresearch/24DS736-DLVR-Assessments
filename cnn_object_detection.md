@@ -38,3 +38,14 @@ You can install the necessary Python packages using pip:
 ```bash
 pip install numpy matplotlib scikit-learn tensorflow opencv-python imutils
 ```
+
+## Global Settings
+
+The following global settings are defined at the beginning of the script:
+
+- `TARGET_IMAGE_SIZE`: The input size for MobileNetV2, which expects images of size (224, 224).
+- `INPUT_SHAPE`: The shape of the input tensor, including the number of channels (224, 224, 3).
+- `BATCH_SIZE`: The batch size used during training.
+- `NUM_EPOCHS`: The number of epochs for training.
+- `INIT_LR`: The initial learning rate for the Adam optimizer.
+- `CLASSES`: The list of classes for multi-class classification (butterfly, dalmatian, dolphin).

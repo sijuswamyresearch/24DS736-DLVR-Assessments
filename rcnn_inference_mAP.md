@@ -39,15 +39,15 @@ pip install numpy scikit-learn tensorflow opencv-python
 
 The global settings define key parameters for the inference pipeline:
 
-- **TARGET_IMAGE_SIZE**: Input size for MobileNetV2 (224, 224)
-- **IOU_THRESHOLD_POSITIVE**: IoU threshold for positive samples (0.3)
-- **IOU_THRESHOLD_NEGATIVE**: IoU threshold for negative samples (0.2)
-- **IMAGE_DIRECTORY**: Directory containing the dataset
-- **ANNOTATION_FILE_PREFIX**: Prefix for annotation files
-- **CLASSES**: List of classes (butterfly, dalmatian, dolphin)
-- **MAX_IMAGES_PER_CLASS**: Number of images processed per class (30)
-- **MAX_PROPOSALS**: Maximum number of region proposals generated per image (10)
-- **MODEL_PATH**: Path to the pre-trained model file
+- `TARGET_IMAGE_SIZE`: Input size for MobileNetV2 (224, 224)
+- `IOU_THRESHOLD_POSITIVE`: IoU threshold for positive samples (0.3)
+- `IOU_THRESHOLD_NEGATIVE`: IoU threshold for negative samples (0.2)
+- `IMAGE_DIRECTORY`: Directory containing the dataset
+- `ANNOTATION_FILE_PREFIX`: Prefix for annotation files
+- `CLASSES`: List of classes (butterfly, dalmatian, dolphin)
+- `MAX_IMAGES_PER_CLASS`: Number of images processed per class (30)
+- `MAX_PROPOSALS`: Maximum number of region proposals generated per image (10)
+- `MODEL_PATH`: Path to the pre-trained model file
 
 ---
 

@@ -11,6 +11,7 @@ Additionally, the repository includes code and results for running inference on 
 - [1. Multi-Class Object Detection Using CNN](cnn_object_detection.md)
 - [2. Multi-Class Object Detection Using RCNN](rcnn_object_detection.md)
 - [3. Inference of RCNN Model](rcnn_inference.md)
+- [4. mAP calculation](rcnn_mAP.md)
 
 ## How to Use This Repository
 - Clone the repository:

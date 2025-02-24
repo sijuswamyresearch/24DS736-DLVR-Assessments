@@ -194,3 +194,4 @@ Plots training and validation loss/accuracy for both classification and bounding
 
 ## Conclusion
 This RCNN-based object detection model uses the ligh weight `MobileNetV2` pretrained model  for efficient feature extraction and adds custom heads for classification and bounding box regression. The model is suitable for small-scale object detection tasks and can be further improved with additional tuning and evaluation.
+>**Link to the code:**[RCNN Multi-object detection](https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments/blob/main/RCNN-for-multi-class-object-detection.py)

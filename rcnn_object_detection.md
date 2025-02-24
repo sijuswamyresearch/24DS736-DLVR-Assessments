@@ -186,6 +186,8 @@ Plots training and validation loss/accuracy for both classification and bounding
   A sample loss and accuracy plot is here:
 
   ![loss-accuracy plot](loss.jpg)
+  ![bounding box](bbox.jpg)
+
 
 ## Saving the Model
 - The trained model is saved as `object_detection_model.h5`.

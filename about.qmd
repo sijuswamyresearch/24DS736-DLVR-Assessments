@@ -1,0 +1,11 @@
+---
+title: "24DS736 Deep Learning for Visual Recognition"
+---
+
+### About the Course
+
+Deep Learning for Visual Recognition focuses on teaching machines to interpret and understand visual data, such as images and videos, using advanced neural network architectures like Convolutional Neural Networks (CNNs). This course covers essential topics like image classification, object detection, and segmentation, equipping learners with the skills to build and optimize models for real-world applications.
+
+Visual recognition is a cornerstone of modern AI, with applications spanning healthcare, autonomous systems, retail, and security. By mastering these techniques, you will gain the ability to analyze and extract insights from visual data, a critical skill in today’s data-driven world.
+
+This course is particularly beneficial for those in data analytics and AI research, offering foundational knowledge, hands-on experience, and exposure to cutting-edge techniques like transfer learning and generative models. It prepares you to tackle complex challenges, innovate in AI, and advance your career in fields where visual data plays a pivotal role.

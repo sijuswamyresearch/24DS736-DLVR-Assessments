@@ -156,3 +156,5 @@ To run inference on a new set of images:
 
 ## Conclusion
 This multi-class object detection model exploits the power of `MobileNetV2` for efficient feature extraction and adds custom heads for classification and bounding box regression. The model is suitable for small-scale object detection tasks and can be further improved with additional tuning and evaluation.
+
+Link to the code: [object detection](https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments/blob/main/Multi-object-detection-and-bounding-box-regression.py)

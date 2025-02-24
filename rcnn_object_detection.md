@@ -183,6 +183,10 @@ Plots training and validation loss/accuracy for both classification and bounding
 - Classification loss and accuracy.
 - Bounding box regression loss and MAE.
 
+  A sample loss and accuracy plot is here:
+
+  ![loss-accuracy plot](loss.jpg)
+
 ## Saving the Model
 - The trained model is saved as `object_detection_model.h5`.
 - The label binarizer (`lb`) is saved as a pickle file (`lb.pickle`).

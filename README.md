@@ -16,4 +16,5 @@ Additionally, the repository includes code and results for running inference on 
 ## How to Use This Repository
 - Clone the repository:
   ```bash
-  git clone <repository-url>
+  git clone https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments
+  ```

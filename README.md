@@ -1,3 +1,6 @@
+
+$$\Huge\color{red}{\text{Deep Learning for Visual Recognition- Assignment-2}}$$
+
 # Multi-Class Object Detection Project
 
 ## Overview
@@ -13,7 +16,11 @@ Additionally, the repository includes code and results for running inference on 
 - [3. Inference of RCNN Model](rcnn_inference.md)
 - [4. mAP calculation](rcnn_inference_mAP.md)
 
-## How to Use This Repository
+
+$$\Huge\color{blue}{\text{Deep Learning - Assignment-2}}$$
+
+# Comparison of RNN, LSTM and GRU using stock price prediction of Tesla stock
+
 - Clone the repository:
   ```bash
   git clone https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments

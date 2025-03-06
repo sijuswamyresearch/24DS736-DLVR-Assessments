@@ -19,9 +19,7 @@ Additionally, the repository includes code and results for running inference on 
 
 $$\Huge\color{blue}{\text{Deep Learning - Assignment-2}}$$
 
-# Comparison of RNN, LSTM and GRU using stock price prediction of Tesla stock
+# Comparison of RNN, LSTM and GRU 
 
-- Clone the repository:
-  ```bash
-  git clone https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments
-  ```
+## Table of Contents
+- [1. Stock market prediction using Recurrent Neural Networks](https://github.com/sijuswamyresearch/24DS736-DLVR-Assessments/blob/main/Stock_Market_Analysis_and_prediction_using_RNN_variants.ipynb)
